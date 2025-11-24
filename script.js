@@ -69,7 +69,7 @@ p3.append(label3,pwd1)
 document.body.append(p,p1,p2,p3,button) */
 
 // Session task 2 color circle:
-
+/* 
 function elements(tagname,content,attrname,attrvalue){
     const res = document.createElement(tagname);
     res.innerHTML = content;
@@ -98,4 +98,29 @@ reset.addEventListener("click",()=>{
 })
 
 division.append(circle,red,green,blue,reset)
-document.body.append(division)
+document.body.append(division) */
+
+
+//session task 3 color circle based on input
+
+    
+
+const circle = document.querySelector("div");
+const input = document.querySelector("#input");
+
+input.addEventListener("change",()=>{
+    console.log(input.value);
+    
+    circle.style.backgroundColor = input.value;
+})
+
+//task 4 :- based on values box should change
+ 
+    
+const box = document.querySelector("#container");
+const input = document.querySelector("#input");
+
+input.addEventListener("input",()=>{ 
+    box.style.borderRadius = input.value;
+    box.style.background = input.value;
+})
