@@ -12,7 +12,7 @@ res.addEventListener('dblclick',()=>{
  */
 
 //Example:task1
-const p = document.createElement("p");
+/* const p = document.createElement("p");
 const p1 = document.createElement("p");
 const p2 = document.createElement("p");
 const p3 = document.createElement("p");
@@ -66,4 +66,36 @@ p.append(label,username)
 p1.append(label1,email)
 p2.append(label2,pwd)
 p3.append(label3,pwd1)
-document.body.append(p,p1,p2,p3,button)
+document.body.append(p,p1,p2,p3,button) */
+
+// Session task 2 color circle:
+
+function elements(tagname,content,attrname,attrvalue){
+    const res = document.createElement(tagname);
+    res.innerHTML = content;
+    res.setAttribute(attrname,attrvalue);
+    return res;
+}
+
+const division = elements("div","","id","container");
+const red = elements("button","red","type","button");
+const circle = elements("div","","id","circle")
+const green = elements("button","green","type","button");
+const blue = elements("button","blue","type","button");
+const reset = elements("button","reset","type","button");
+
+red.addEventListener("click",()=>{
+  circle.style.backgroundColor = "red";
+})
+green.addEventListener("click",()=>{
+  circle.style.backgroundColor = "green";
+})
+blue.addEventListener("click",()=>{
+  circle.style.backgroundColor = "blue";
+})
+reset.addEventListener("click",()=>{
+  circle.style.backgroundColor = "white";
+})
+
+division.append(circle,red,green,blue,reset)
+document.body.append(division)
