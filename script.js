@@ -105,14 +105,14 @@ document.body.append(division) */
 
     
 
-const circle = document.querySelector("div");
+/* const circle = document.querySelector("div");
 const input = document.querySelector("#input");
 
 input.addEventListener("change",()=>{
     console.log(input.value);
     
     circle.style.backgroundColor = input.value;
-})
+}) */
 
 //task 4 :- based on values box should change
  
